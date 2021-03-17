@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1 class="flex items-center"><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include partials/header %>
+<form action="/weather" method="POST">
+  <input type="text" placeholder="Enter your postcode" aria-label="location" name="location">
+  <button type="submit">Get Weather</button>
+</form>
+<% include partials/footer %>
+
